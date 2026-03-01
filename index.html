@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supra Mayro Kratt</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @keyframes bgFade {
+            0%   { background-color: hsl(0,   40%, 40%); }
+            25%  { background-color: hsl(90,  40%, 40%); }
+            50%  { background-color: hsl(180, 40%, 40%); }
+            75%  { background-color: hsl(270, 40%, 40%); }
+            100% { background-color: hsl(360, 40%, 40%); }
+        }
+
+        body {
+            background-color: hsl(0, 40%, 40%);
+            animation: bgFade 14s infinite linear;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #ffaa00;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: #888;
+            font-size: 0.95em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            text-decoration: none;
+            color: #fff;
+            background: #1e1e1e;
+            border: 2px solid #333;
+            border-radius: 16px;
+            padding: 40px 50px;
+            text-align: center;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .card:hover { transform: translateY(-4px); }
+        .card-pc:hover { border-color: #0088ff; }
+        .card-mobile:hover { border-color: #00cc55; }
+
+        .card .icon { font-size: 2.8em; margin-bottom: 12px; }
+        .card .label { font-size: 1.2em; font-weight: 700; }
+        .card .desc { font-size: 0.8em; color: #666; margin-top: 6px; }
+    </style>
+</head>
+<body>
+    <h1>Supra Mayro Kratt</h1>
+    <p>Multiplayer Racing</p>
+
+    <div class="cards">
+        <a href="pc.html" class="card card-pc">
+            <div class="label">PC</div>
+            <div class="desc">WARNING! Flashing lights!</div>
+        </a>
+        <a href="mobile.html" class="card card-mobile">
+            <div class="label">Mobile</div>
+            <div class="desc">It's just light i guess...</div>
+        </a>
+    </div>
+</body>
+</html>
